@@ -9,7 +9,7 @@ import TableRow from '@material-ui/core/TableRow';
 import TableCell from '@material-ui/core/TableCell';
 import { withStyles } from '@material-ui/core/styles';
 
-const styles = theme => ({
+const styles = (theme) => ({
   root : {
     width : '100%',
     marginTop : theme.spacing.unit * 3,
@@ -18,7 +18,7 @@ const styles = theme => ({
   table: {
     minWidth: 1080
   }
-})
+});
 
 const customers = [{
   'id': 1,
