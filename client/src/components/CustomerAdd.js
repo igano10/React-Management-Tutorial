@@ -20,8 +20,17 @@ class CustomerAdd extends React.Component {
         e.preventDefault();
 
         this.addCustomer()
-        .then((response) => {
-            console.log(response.data);
+            .then((response) => {
+                console.log(response.data);
+                this.props.stateRefresh();
+            })
+        this.setState({
+            file: null,
+            userName: '',
+            birthday: '',
+            gender: '',
+            job: '',
+            fileName: ''
         })
     }
 
@@ -60,7 +69,7 @@ class CustomerAdd extends React.Component {
                 이름 : <input type="text" name="userName" value={this.state.userName} onChange={this.handleValueChange} /> <br/>
                 생년월일 : <input type="text" name="birthday" value={this.state.birthday} onChange={this.handleValueChange} /> <br/>
                 성별: <input type="text" name="gender" value={this.state.gender} onChange={this.handleValueChange} /> <br/>
-                직업: <input type="text" name="job" value={this.state.job} onChange={this.handleValueChange} />
+                직업: <input type="text" name="job" value={this.state.job} onChange={this.handleValueChange} /> <br/>
                 <button type="submit">추가하기</button>
             </form>
         )
