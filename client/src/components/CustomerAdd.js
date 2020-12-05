@@ -25,7 +25,7 @@ class CustomerAdd extends React.Component {
             birthday: '',
             gender: '',
             job: '',
-            fineName: '',
+            fileName: '',
             open: false
         }
     }
